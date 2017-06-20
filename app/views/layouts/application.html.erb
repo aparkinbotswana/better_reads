@@ -6,6 +6,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <%= cloudinary_js_config %>
+
     <link rel="stylesheet" href="/css/style.css">
     <script src="javascript/jquery.js"></script>
     <script src="javascript/javascript.js"></script>
@@ -13,6 +16,23 @@
   </head>
 
   <body>
+
+    <div id="left" class="column">
+        <div class="bottom">32hello</div>
+    </div>
+
+      <div id="right" class="column">
+        <div class="top-right">
+          <a href="/users/new">Sign Up</a>
+
+        </div>
+        <div class="bottom"></div>
+    </div>
+
+
+
+
+
     <%= yield %>
   </body>
 </html>

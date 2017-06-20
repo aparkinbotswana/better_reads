@@ -13,7 +13,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create user_params
+    @user = User.create (user_params)
+    if params[:file].present?
+      # perform file upload
+      req = Cloudinary::Uploader.upload params[:file]
+
+    end
+
+    @user.image = req['public_id']
+    @user.save
+
     if @user.id.present?
       session[:user_id] = @user.id  # perform login (set session)
       redirect_to user_path(@user.id)   # /users/17
@@ -49,7 +58,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :name, :image, :password, :password_confirmation)
+    params.require(:user).permit(:email, :username, :image, :password, :password_confirmation)
   end
 
 end

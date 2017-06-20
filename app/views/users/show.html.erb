@@ -2,4 +2,4 @@
 
 <p>Email: <%= @user.email %> </p>
 <p>Name: <%= @user.username %> </p>
-<img src="<%= @user.image %>" alt="">
+<%= cl_image_tag @user.image %>

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: jamestheo
+  api_key: '226443818415557'
+  api_secret: l8K9fkJ7aOstUdle0ZbYGZg4KIE
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: jamestheo
+  api_key: '226443818415557'
+  api_secret: l8K9fkJ7aOstUdle0ZbYGZg4KIE
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: jamestheo
+  api_key: '226443818415557'
+  api_secret: l8K9fkJ7aOstUdle0ZbYGZg4KIE
+  enhance_image_tag: true
+  static_image_support: false
