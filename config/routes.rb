@@ -1,41 +1,40 @@
 Rails.application.routes.draw do
-  get 'reviews/create'
 
-  get 'reviews/edit'
+  root 'reviews#index'
 
-  get 'reviews/update'
+  # get '/reviews/create' =>
 
-  get 'reviews/show'
+  # get '/reviews/edit' =>
 
-  get 'reviews/index'
+  # get '/reviews/update' =>
 
-  get 'reviews/destroy'
+  # get '/reviews/show' =>
 
-  get 'books/create'
+  get '/reviews' => 'reviews#index'
+  #
+  # get '/reviews/destroy' =>
+  #
+  # get '/books/create' =>
+  #
+  # get '/books/edit' =>
+  #
+  # get '/books/show' =>
+  #
+  # get '/books/destroy' =>
+  #
+  get '/users/new' => 'users#new'
+  #
+  # get '/users/create' =>
+  #
+  # get '/users/edit' =>
+  #
+  # get '/users/update' =>
+  #
+  get '/users/:id' => "users#show"
 
-  get 'books/edit'
+  # get '/users/destroy' =>
 
-  get 'books/update'
-
-  get 'books/show'
-
-  get 'books/index'
-
-  get 'books/destroy'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/show'
-
-  get 'users/index'
-
-  get 'users/destroy'
+  resources :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

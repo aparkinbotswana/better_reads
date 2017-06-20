@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-u1 = User.create email: "gooderreads@gooderreads.com", username: "gooderreads", image: "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx"
-u2 = User.create email: "mylittlepony@mylittlepony.com", username: "mylittlepony", image: "https://mylittlepony.hasbro.com/images/CharacterPageAvatar_MLP_pinkiepie.png"
-u3 = User.create email: "chicken@chicken.com", username: "chicken", image: "http://a57.foxnews.com/images.foxnews.com/content/fox-news/food-drink/2017/03/20/giant-chicken-looks-like-grown-man-in-costume-according-to-internet/_jcr_content/par/featured-media/media-0.img.jpg/0/0/1490031787910.jpg?ve=1"
-u4 = User.create email: "catdog@catdog.com", username: "catdog", image: "https://thoughtcatalog.files.wordpress.com/2014/05/screen-shot-2014-05-22-at-4-21-20-pm.png?w=1400"
+u1 = User.create email: "gooderreads@gooderreads.com", username: "gooderreads", image: "https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx", password_digest: "gooderreads"
+u2 = User.create email: "mylittlepony@mylittlepony.com", username: "mylittlepony", image: "https://mylittlepony.hasbro.com/images/CharacterPageAvatar_MLP_pinkiepie.png", password_digest: "mylittlepony"
+u3 = User.create email: "chicken@chicken.com", username: "chicken", image: "http://a57.foxnews.com/images.foxnews.com/content/fox-news/food-drink/2017/03/20/giant-chicken-looks-like-grown-man-in-costume-according-to-internet/_jcr_content/par/featured-media/media-0.img.jpg/0/0/1490031787910.jpg?ve=1", password_digest: "chicken"
+u4 = User.create email: "catdog@catdog.com", username: "catdog", image: "https://thoughtcatalog.files.wordpress.com/2014/05/screen-shot-2014-05-22-at-4-21-20-pm.png?w=1400", password_digest: "catdog"
 
 
 
