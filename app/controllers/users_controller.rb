@@ -1,23 +1,29 @@
 class UsersController < ApplicationController
 
-  before_action :get_user,       only: [ :show, :edit, :update ]
+  before_action :get_user, only: [ :show, :edit, :update ]
 
+  before_action :check_if_logged_in, only: [:edit, :update]
+
+  before_action :logged_in_user, only: [:edit, :update]
+
+  before_action :correct_user,   only: [:edit, :update]
+  # checks if user is the correct user when editing profile
 
   def get_user
     @user = User.find params["id"]
   end
 
+
   def new
     @user = User.new
-
   end
+
 
   def create
     @user = User.create (user_params)
     if params[:file].present?
       # perform file upload
       req = Cloudinary::Uploader.upload params[:file]
-
     end
 
     @user.image = req['public_id']
@@ -29,36 +35,53 @@ class UsersController < ApplicationController
       else
       render :new
     end
-
   end
+
 
   def edit
-    redirect_to root_path unless @current_user == @user
-
+    @user = User.find(params[:id])
+    # redirect_to root_path unless @current_user == @user
   end
 
+
   def update
-    @user = @current_user # makes sure user can only edit their own profile
+    # @user = @current_user # makes sure user can only edit their own profile
 
     @user.update user_params
     redirect_to user_path( params["id"] )
-
   end
+
 
   def show
     @user = User.find(params[:id])
   end
 
+
   def index
     @users = User.all
   end
 
+
   def destroy
   end
 
-  private
-  def user_params
-    params.require(:user).permit(:email, :username, :image, :password, :password_confirmation)
-  end
 
+  private
+    def user_params
+      params.require(:user).permit(:email, :username, :image, :password, :password_confirmation)
+    end
+
+
+    def logged_in_user
+      unless logged_in?
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless @user == current_user
+    end
+  end
 end

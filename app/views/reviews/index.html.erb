@@ -1,2 +1,22 @@
 
-<a href="/users/new">Sign Up</a>
+<div id="login">
+  <a href="/users/new">Sign Up</a>
+
+  <% if flash[:error].present? %>
+    <p><strong> <%= flash[:error] %> </strong></p>
+  <% end %>
+
+  <%= form_tag login_path do %>
+
+    <%= label_tag 'Email' %>
+    <%= email_field_tag :email, nil %>
+    <br>
+
+    <%= label_tag 'Password' %>
+    <%= password_field_tag :password, nil %>
+    <br>
+
+    <%= submit_tag 'Login' %>
+
+  <% end %>
+</div>
