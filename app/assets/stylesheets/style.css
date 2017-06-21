@@ -20,7 +20,8 @@ body {
 #left {
   color: rgb(197, 197, 197);
   flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
-  background: rgb(50, 19, 37);
+background-color: yellow;
+  /*background: rgb(50, 19, 37);*/
 }
 
 
@@ -37,4 +38,20 @@ ul {
 .bottom {
   flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
   overflow-y: auto;  /*adds scroll to this container*/
+}
+
+#navButton {
+background: red;
+
+/*flex: 1;
+display: flex;*/
+
+text-align: center;
+/*justify-content: center;*/
+/*flex-flow: column wrap;*/
+}
+
+.nav {
+  background-color: pink;
+  flex-grow: 1;
 }

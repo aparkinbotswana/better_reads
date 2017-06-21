@@ -2,13 +2,18 @@ Rails.application.routes.draw do
 
   root 'reviews#index'
 
-  # get '/reviews/create' =>
+
+  get '/reviews/create' => 'reviews#new'
+  get "/reviews/:id/edit" => "reviews#edit"
+  post '/reviews/create' => 'reviews#update'
 
   # get '/reviews/show' =>
 
   get '/reviews' => 'reviews#index'
   #  #
-  # get '/books/create' =>
+  get '/books/create' => 'books#new'
+  get "/books/:id/edit" => "books#edit"
+  post '/books/create' => 'books#update'
   #  #
   # get '/books/show' =>
   #  #
