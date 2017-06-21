@@ -1,0 +1,12 @@
+<%= form_for @review do |f| %>
+
+
+<p>
+  <%= f.label :review %>
+  <%= f.text_field :review, required: true%>
+
+</p>
+
+
+<%= f.submit%>
+<% end %>

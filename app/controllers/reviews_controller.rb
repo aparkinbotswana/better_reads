@@ -3,8 +3,14 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
   def create
-    @review = Review.create review_params
-    @review.user_id(@current_user.id)
+    @review = Review.create({
+      review: params["review"],
+      user_id: params[user_id],
+      book_id: params[book_id]
+
+      })
+
+      redirect_to user_path(user)
   end
 
 

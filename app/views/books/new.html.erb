@@ -1,0 +1,44 @@
+<%= form_for @book do |f| %>
+
+
+<p>
+  <%= f.label :book_title %>
+  <%= f.text_field :book_title, required: true%>
+
+</p>
+
+
+<p>
+  <%= f.label :series_title %>
+  <%= f.text_field :series_title, required: false%>
+
+</p>
+
+
+<p>
+  <%= f.label :author %>
+  <%= f.text_field :author, required: true%>
+
+</p>
+
+<p>
+  <%= f.label :year %>
+  <%= f.text_field :year, required: false%>
+
+</p>
+
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description, required: true%>
+
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.cl_image_upload :image, required:  false%>
+
+</p>
+
+
+<%= f.submit%>
+<% end %>

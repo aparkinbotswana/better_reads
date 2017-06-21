@@ -4,18 +4,25 @@ Rails.application.routes.draw do
   root 'reviews#index'
 
 # below get pathway probably needs :id param as well to link to appropriate user
-  get '/reviews/create' => 'reviews#new'
+  # get '/reviews/new' => 'reviews#new'
+  # post '/reviews/create' => 'reviews#create'
+
+
   get "/reviews/:id/edit" => "reviews#edit"
-  post '/reviews/create' => 'reviews#update'
+  post '/reviews/:id' => 'reviews#update'
 
   # get '/reviews/show' =>
 
   get '/reviews' => 'reviews#index'
   #  #
-  get '/books/create' => 'books#new'
+  # get '/books/new' => 'books#new'
   # get "/books/:id/edit" => "books#edit"
-  post '/books/create' => 'books#update'
-  #  #
+  # post '/books/create' => 'books#create'
+
+
+  # get '/books/:id/edit' => 'books#edit'
+  # post '/books/:id' => 'books#update'
+
   # get '/books/show' =>
   #  #
   get '/users/new' => 'users#new'
@@ -35,6 +42,9 @@ Rails.application.routes.draw do
 
 
   resources :users
+  resources :books
+  resources :reviews
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

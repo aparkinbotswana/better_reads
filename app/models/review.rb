@@ -14,5 +14,5 @@ class Review < ApplicationRecord
 
 belongs_to :user, optional: true
 belongs_to :book, optional: true
-ratyrate_rateable 'Rating'
+# ratyrate_rateable 'Rating'
 end
