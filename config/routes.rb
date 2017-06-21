@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  post '/rate' => 'rater#create', :as => 'rate'
   root 'reviews#index'
 
-
+# below get pathway probably needs :id param as well to link to appropriate user
   get '/reviews/create' => 'reviews#new'
   get "/reviews/:id/edit" => "reviews#edit"
   post '/reviews/create' => 'reviews#update'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   get '/reviews' => 'reviews#index'
   #  #
   get '/books/create' => 'books#new'
-  get "/books/:id/edit" => "books#edit"
+  # get "/books/:id/edit" => "books#edit"
   post '/books/create' => 'books#update'
   #  #
   # get '/books/show' =>

@@ -4,10 +4,10 @@ class BooksController < ApplicationController
     @book = Book.create (user_params)
   end
 
-
-  def edit
-    @book = Book.find params["id"]
-  end
+  # Probably don't want this edit. Don't want users editing a books details. Admin only function. 
+  # def edit
+  #   @book = Book.find params["id"]
+  # end
 
 
   # def update
