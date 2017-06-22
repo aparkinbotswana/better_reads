@@ -5,5 +5,10 @@
 <p>Name: <%= @user.username %> </p>
 <br>
 <%= cl_image_tag @user.image %>
+<br>
 <a href="/books/new">Add Book</a>
+<br>
 <a href="/reviews/new">Add review</a>
+<br>
+<%= link_to 'Delete Account', user_path(@user),
+  data: {:confirm => 'Are you sure you would like to deactivate your account?'}, :method => :delete %>

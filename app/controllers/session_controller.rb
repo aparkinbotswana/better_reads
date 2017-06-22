@@ -12,7 +12,7 @@ class SessionController < ApplicationController
     else
       # mismatch/bad credentials
       flash[:error] = "Incorrect email address and/or password"
-      redirect_to login_path
+      redirect_to(root_url)
     end
 
   end
