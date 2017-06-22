@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     if params[:file].present?
       # perform file upload
       req = Cloudinary::Uploader.upload params[:file]
+      raise "hell"
       @user.image = req['public_id']
     end
 

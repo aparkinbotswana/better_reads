@@ -14,16 +14,24 @@ Rails.application.routes.draw do
   # get '/reviews/show' =>
 
   get '/reviews' => 'reviews#index'
-  #  #
+
+  get '/books' => 'books#index'
+
+  get '/books/new' => 'books#new'
+  post '/books/create' => 'books#create'
+
+  # get '/books/:id' => 'books#show'
+
+
   get '/users/new' => 'users#new'
   delete "/users/:id" => "users#destroy"
-
-  # get '/users/create' =>
   #
   get "/users/:id/edit" => "users#edit"
   post "/users/:id" => "users#update"
   #
   get '/users/:id' => "users#show"
+
+
 
   get     '/login' => 'session#new'       # login form
   post    '/login' => 'session#create'   # check credentials & attempt login (set session)

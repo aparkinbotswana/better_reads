@@ -9,8 +9,6 @@ class ReviewsController < ApplicationController
 
   def create
 
-    # raise 'hell'
-
     @review = Review.new(review_params)
 
     @review.user = @current_user
