@@ -1,11 +1,22 @@
 <h1>Books show</h1>
 
-<%= @book.book_title %><br>
-<%= @book.series_title %><br>
-<%= @book.author %><br>
-<%= @book.year %><br>
-<%= @book.description %><br>
+<div class="bookinfo"><p>Book Title:</p></div>
+<div class="bookdata"><%= @book.book_title %></div><br>
+
+<div class="bookinfo"><p>Series Title:</p></div>
+<div class="bookdata"><%= @book.series_title %></div><br>
+
+<div class="bookinfo"><p>Author:</p></div>
+<div class="bookdata"><%= @book.author %></div><br>
+<div class="bookinfo"><p>Year:</p></div>
+<div class="bookdata"><%= @book.year %></div><br>
+
+<div class="bookinfo"><p>Book Description:</p></div>
+<div class="bookdata"><%= @book.description %></div><br>
+
+<div class="bookimg">
 <%= cl_image_tag @book.image %>
+</div>
 <br>
 
 

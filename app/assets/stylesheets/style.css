@@ -1,6 +1,50 @@
+
+.row {
+  text-align: center;
+}
+
+
+#gooder {
+  font-family: 'Cinzel', serif !important;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#reads {
+  font-family: 'Cinzel', serif !important;
+  font-size: 50px;
+}
+
+#slogan {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.heading {
+  display: inline-block;
+}
+
+#book {
+}
+
+/*#title {
+  margin: 0 auto;
+}*/
+
+
+.bookinfo {
+}
+
+.bookdata {
+}
+
+.bookimg {
+}
+
 .background {
-  background: rgb(50, 19, 37);
-  color: rgb(197, 197, 197);
+  background: rgb(249, 249, 255);
+  /*color: rgb(197, 197, 197);*/
 }
 
 .profilephoto {
@@ -11,56 +55,11 @@
   font-style: italic;
 }
 
+
 a {
-  color: white !important;
+  background: rgb(18, 18, 18) !important;
 }
 
 input {
-  background-color: black !important;
+  background-color: blue !important;
 }
-
-/*html {
-    height: 100%;
-}
-
-
-.column {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-#left {
-  color: rgb(197, 197, 197);
-  flex-shrink: 0;
-  background-color: yellow;
-  background: rgb(50, 19, 37);
-}
-
-
-.top-right {
-  flex-shrink: 0;
-  display: inline-flex;
-}
-
-ul {
-  display: inline-flex;
-  list-style: none;
-}
-
-.bottom {
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-#navButton {
-background: red;
-
-
-text-align: center;
-}
-
-.nav {
-  background-color: pink;
-  flex-grow: 1;
-}*/

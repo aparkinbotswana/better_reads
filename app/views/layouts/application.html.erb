@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Gooder Reads</title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -17,6 +18,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+
+
   </head>
 
   <body class="background">
@@ -26,8 +30,17 @@
 
 
 
-      <div class="row">
-        <p>Hello World</p>
+      <div class="row" id="logout">
+        <!-- <div id="title" -->
+
+          <p class="heading" id="gooder">Gooder</p>
+
+          <p class="heading" id="reads">Reads</p>
+
+          <p class="heading" id="slogan">Better than good</p>
+          <img id="book" src="http://res.cloudinary.com/jamestheo/image/upload/v1498171799/openbook_hvbz7y.png" alt="">
+
+        <!-- </div> -->
 
       <% if @current_user.present? %>
 
