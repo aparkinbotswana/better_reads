@@ -22,8 +22,12 @@ class BooksController < ApplicationController
   # def update
   # end
 
+  def index
+    @books = Book.all
+  end
 
   def show
+    @book = Book.find params[:id]
   end
 
 

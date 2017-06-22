@@ -1,11 +1,25 @@
 class ReviewsController < ApplicationController
+
+  before_action :check_if_logged_in, only: [:new, :create]
+
   def new
     @review = Review.new
   end
-  def create
-    @review = Review.create(review_params)
 
-      redirect_to user_path(user)
+
+  def create
+
+    # raise 'hell'
+
+    @review = Review.new(review_params)
+
+    @review.user = @current_user
+    @review.book_id = params[:book_id]
+
+    @review.save
+
+
+      redirect_to book_path(params[:book_id])
   end
 
 
@@ -30,8 +44,8 @@ class ReviewsController < ApplicationController
   end
 
   private
-    def book_params
-      params.require(:review, :user_id, :book_id)
+    def review_params
+      params.require(:review).permit(:review)
     end
 
 end

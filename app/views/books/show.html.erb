@@ -1,2 +1,31 @@
 <h1>Books#show</h1>
 <p>Find me in app/views/books/show.html.erb</p>
+
+<%= @book.book_title %>
+
+<hr>
+<h3>Reviews</h3>
+
+
+<ul>
+<% @book.reviews.each do  |r| %>
+  <li>
+    <%= r.review %><br>
+    - <%= r.user.username %>, <%= time_ago_in_words r.created_at %> ago
+  </li>
+<% end %>
+</ul>
+
+
+<hr>
+
+<%= form_for Review.new do |f| %>
+
+  <%= f.label :review %>
+  <%= f.text_area :review %>
+
+  <%= hidden_field_tag :book_id, @book.id %>
+
+  <%= f.submit %>
+
+<% end %>
