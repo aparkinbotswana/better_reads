@@ -53,9 +53,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # @book = Book.find params["id"]
-    # @review = Review.find params["id"]
-    # @review = Review.find @user
+
+    # @review = Review.find @current_user
 
   end
 

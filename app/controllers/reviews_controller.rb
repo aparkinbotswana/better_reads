@@ -3,12 +3,7 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
   def create
-    @review = Review.create({
-      review: params["review"],
-      user_id: params[user_id],
-      book_id: params[book_id]
-
-      })
+    @review = Review.create(review_params)
 
       redirect_to user_path(user)
   end
@@ -32,6 +27,11 @@ class ReviewsController < ApplicationController
 
   def destroy
     Review.find params["id"]
-
   end
+
+  private
+    def book_params
+      params.require(:review, :user_id, :book_id)
+    end
+
 end
