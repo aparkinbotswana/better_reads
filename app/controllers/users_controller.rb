@@ -22,10 +22,11 @@ class UsersController < ApplicationController
     if params[:file].present?
       # perform file upload
       req = Cloudinary::Uploader.upload params[:file]
+      @user.image = req['public_id']
     end
 
-    @user.image = req['public_id']
     @user.save
+
 
     if @user.id.present?
       session[:user_id] = @user.id  # perform login (set session)
