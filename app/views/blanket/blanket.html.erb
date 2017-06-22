@@ -21,3 +21,11 @@
 
 </p>
  -->
+
+
+
+ <% @books.each do  |book| %>
+   <% if @books.user_id == @user %>
+   <li> <%= link_to book.book_title, book_path( book ) %> - <%= book.author %></li>
+   <% end %>
+ <% end %>

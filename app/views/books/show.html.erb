@@ -1,12 +1,12 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1>Books show</h1>
 
 <%= @book.book_title %><br>
 <%= @book.series_title %><br>
 <%= @book.author %><br>
 <%= @book.year %><br>
 <%= @book.description %><br>
-<%= @book.image %><br>
+<%= cl_image_tag @book.image %>
+<br>
 
 
 <hr>

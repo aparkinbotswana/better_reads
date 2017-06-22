@@ -7,12 +7,6 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
-  # if params[:file].present?
-  #   # perform file upload
-  #   req = Cloudinary::Uploader.upload params[:file]
-  #   @user.image = req['public_id']
-  # end
-
 
   def create
     @book = Book.create({
@@ -34,34 +28,10 @@ class BooksController < ApplicationController
   end
 
 
-  # def update
-  #
-  #   @book = Book.find params[:id]
-  #
-  #   @book = Book.update({
-  #     book_title: params["book_title"],
-  #     series_title: params["series_title"],
-  #     author: params["author"],
-  #     description: params["description"],
-  #     year: params["year"],
-  #     image: params["image"],
-  #     user_id: @current_user.id
-  #     })
-  #
-  #     @book.save
-  #
-  # end
-  # Probably don't want this edit. Don't want users editing a books details. Admin only function.
-  # def edit
-  # end
-
-
-  # def update
-  # end
-
   def index
     @books = Book.all
   end
+
 
   def show
     @book = Book.find params[:id]

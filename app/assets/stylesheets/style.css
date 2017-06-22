@@ -7,8 +7,16 @@
   border-radius: 50%;
 }
 
+.deleteaccount {
+  font-style: italic;
+}
+
 a {
   color: white !important;
+}
+
+input {
+  background-color: black !important;
 }
 
 /*html {
