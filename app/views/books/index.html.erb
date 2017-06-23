@@ -3,5 +3,6 @@
 
   <% @books.each do  |book| %>
     <%= link_to book.book_title, book_path( book )  %> - <%= book.author %>
+    <br>
   <% end %>
 </div>
