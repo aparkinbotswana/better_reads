@@ -24,22 +24,17 @@
   </div>
 
   <div class="col-md-6" id="book_details">
-
-    <ul>
+      <h2>Books Added</h2>
       <% @user.books.each do |book| %>
-      <li>
         <%= link_to book.book_title, book_path(book) %>
-      </li>
       <% end %>
-    </ul>
+      <hr>
+      <br>
 
-    <ul>
+      <h2>Reviews</h2>
       <% @user.reviews.each do |review| %>
-      <li>
         <%= link_to review.book.book_title, book_path(review.book) %>
-      </li>
       <% end %>
-    </ul>
 
   </div>
 

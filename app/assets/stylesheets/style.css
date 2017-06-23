@@ -40,7 +40,7 @@
 }
 
 .input_form {
-  text-align: center;
+  text-align: center !important;
 }
 
 
