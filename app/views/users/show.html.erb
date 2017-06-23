@@ -27,6 +27,7 @@
       <h2>Books Added</h2>
       <% @user.books.each do |book| %>
         <%= link_to book.book_title, book_path(book) %>
+        <br>
       <% end %>
       <hr>
       <br>
@@ -34,6 +35,7 @@
       <h2>Reviews</h2>
       <% @user.reviews.each do |review| %>
         <%= link_to review.book.book_title, book_path(review.book) %>
+        <br>
       <% end %>
 
   </div>
