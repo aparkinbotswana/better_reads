@@ -39,7 +39,7 @@
       <%= r.review %><br>
       -
 
-      <%= r.user.username %>,
+      <%= link_to r.user.username, user_path(r.user_id) %>,
       <%= time_ago_in_words r.created_at %>
       ago
       <br>
