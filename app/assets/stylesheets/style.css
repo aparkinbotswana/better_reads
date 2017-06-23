@@ -1,4 +1,6 @@
 /*, :class => "img_preview"*/
+
+
 .row {
   text-align: center;
   margin-bottom: 40px;
@@ -51,10 +53,12 @@
   margin-top: -10px;
 }
 
-.bookdata {
+#profile_details {
+  text-align: center;
 }
 
-.bookimg {
+#book_details {
+  text-align: center !important;
 }
 
 .background {
