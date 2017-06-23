@@ -1,7 +1,7 @@
-<h1>All Books</h1>
+<div id="all_books">
+  <h1>All Books</h1>
 
-<ul>
-<% @books.each do  |book| %>
-  <li><%= link_to book.book_title, book_path( book )  %> - <%= book.author %></li>
-<% end %>
-</ul>
+  <% @books.each do  |book| %>
+    <%= link_to book.book_title, book_path( book )  %> - <%= book.author %>
+  <% end %>
+</div>

@@ -61,8 +61,12 @@
   text-align: center !important;
 }
 
+#all_books {
+  text-align: center !important;
+}
+
 .background {
-  background: rgb(249, 249, 255);
+  background: rgb(249, 249, 249);
 }
 
 .profilephoto {
@@ -71,6 +75,10 @@
 
 .deleteaccount {
   font-style: italic;
+}
+
+hr {
+  border-bottom: 2px solid black !important;
 }
 
 h2 {
@@ -90,7 +98,7 @@ button {
 }
 
 input {
-  background-color: rgb(247, 247, 255) !important;
+  background-color: rgb(249, 249, 255) !important;
   border-radius: 10px !important;
   width: 250px;
 }

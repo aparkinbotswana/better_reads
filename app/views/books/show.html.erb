@@ -35,18 +35,14 @@
   <hr>
   <h3>Reviews</h3>
 
-  <ul>
     <% @book.reviews.each do  |r| %>
-    <li>
       <%= r.review %><br>
       -
-      
+
       <%= r.user.username %>,
       <%= time_ago_in_words r.created_at %>
       ago
-    </li>
     <% end %>
-  </ul>
 
   <hr>
 
