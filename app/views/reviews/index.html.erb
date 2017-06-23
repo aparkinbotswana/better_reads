@@ -1,21 +1,36 @@
 
-<div id="login">
-  <a href="/users/new">Sign Up</a>
+<div class="input_form">
+  <a href="/users/new"><p id="sign_up"></p>Sign Up</a>
+  <br>
+  <br>
 
   <% if flash[:error].present? %>
     <p><strong> <%= flash[:error] %> </strong></p>
   <% end %>
 
+
   <%= form_tag login_path do %>
 
-    <%= label_tag 'Email' %>
-    <%= email_field_tag :email, nil %>
+
+    <div id="email_input">
+      <%= label_tag 'Email' %>
+    </div>
+
+    <div class="login_field">  <%= email_field_tag :email, nil %>
+    </div>
+
+
+    <div id="password_field">
+      <%= label_tag 'Password' %>
+    </div>
+
+    <div class="login_field">
+      <%= password_field_tag :password, nil %>
+    </div>
+
     <br>
 
-    <%= label_tag 'Password' %>
-    <%= password_field_tag :password, nil %>
     <br>
-
     <%= submit_tag 'Login' %>
 
 

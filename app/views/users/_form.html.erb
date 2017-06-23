@@ -1,24 +1,30 @@
 <%= form_for @user, html: {multipart: true}  do |f| %>
 
   <%= f.label :email %>
+  <br>
   <%= f.email_field :email %>
   <br>
 
   <%= f.label :password %>
+  <br>
   <%= f.password_field :password %>
   <br>
   <%= f.label :password_confirmation %>
+  <br>
   <%= f.password_field :password_confirmation %>
   <br>
 
   <%= f.label :username %>
+  <br>
   <%= f.text_field :username %>
   <br>
 
-  <%= f.label :image %>
-  <%= f.cl_image_upload :image %>
-  <br>
-
+  <div id="img_upload">
+    <%= f.label :image %>
+    <br>
+    <%= f.cl_image_upload :image %>
+    <br>
+  </div>
 
   <%= f.submit %>
 
