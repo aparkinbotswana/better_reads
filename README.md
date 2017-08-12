@@ -4,7 +4,7 @@ My Gooder Reads project is a book review website designed to allow avid readers 
 
 My live, [Gooder Reads](https://gooder-reads.herokuapp.com/) site can be found here.
 
-![Alt text](assets/images/GooderReads.png)
+![Alt text](app/assets/images/GooderReads.png)
 
 ## Features
 - Users are able to add books to their collection of read books and input the details of it.
